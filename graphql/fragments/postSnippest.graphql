@@ -1,0 +1,12 @@
+fragment PostSnippest on Post {
+  _id
+  title
+  createdAt
+  updatedAt
+  textSnippest
+  points
+  creatorId
+  creator {
+    username
+  }
+}
