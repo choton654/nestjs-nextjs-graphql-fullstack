@@ -1,8 +1,35 @@
 version: '3.4'
 
 services:
+  mongo:
+    container_name: mymongo
+    image: mongo:latest
+    networks:
+      - webnet
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
   redis:
     container_name: rdb
     image: redis
+    networks:
+      - webnet
     ports:
       - 6379:6379
+  web:
+    image: nest-next-graphql-api
+    networks:
+      - webnet
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+    environment:
+      DB_HOST: mongo
+      REDIS_HOST: redis
+volumes:
+  mongo:
+networks:
+  webnet:

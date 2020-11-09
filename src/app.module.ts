@@ -33,7 +33,7 @@ const dev = process.env.NODE_ENV !== 'production';
       },
     }),
     MikroOrmModule.forRoot({
-      clientUrl: process.env.MONGO_URI,
+      clientUrl: `mongodb://${process.env.DB_HOST}:27017/lireddit`,
       entities: [Post, User, Updoot],
       dbName: 'lireddit',
       type: 'mongo',
