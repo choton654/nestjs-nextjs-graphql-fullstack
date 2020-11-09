@@ -221,7 +221,7 @@ export class UserResolver {
 
     sendEmail(
       email,
-      `<a href='${process.env.BASE_URL}/change-password/${token}'>reset password</a>`,
+      `<a href='${process.env.BASE_URL}change-password/${token}'>reset password</a>`,
     );
 
     return true;
