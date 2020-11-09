@@ -5,6 +5,10 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": "14.4.0",
+    "npm": "6.14.5"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "gen": "graphql-codegen --config codegen.yml",
