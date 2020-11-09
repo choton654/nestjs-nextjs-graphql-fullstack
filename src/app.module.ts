@@ -5,7 +5,6 @@ import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { MikroOrmModule } from '@mikro-orm/nestjs/mikro-orm.module';
 import RepoModule from './repo.module';
-import config from './mikro-orm.config';
 import { TypeGraphQLModule } from 'typegraphql-nestjs';
 import { MyContext } from './types';
 import { MongoHighlighter } from '@mikro-orm/mongo-highlighter';

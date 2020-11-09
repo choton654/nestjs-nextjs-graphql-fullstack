@@ -1,18 +1,11 @@
-import {
-  Button,
-  FormLabel,
-  FormControl,
-  FormErrorMessage,
-  Input,
-  Box,
-} from '@chakra-ui/core';
+import { Box, Button } from '@chakra-ui/core';
+import { Form, Formik } from 'Formik';
+import { useRouter } from 'next/router';
 import * as React from 'react';
-import { Formik, Field, Form } from 'Formik';
-import Wrapper from '../components/Wrapper';
 import InputField from '../components/InputField';
+import Wrapper from '../components/Wrapper';
 import { MeDocument, MeQuery, useRegisterMutation } from '../generated/graphql';
 import { toErrorMap } from '../utils/maperror';
-import { useRouter } from 'next/router';
 import { withApollo } from '../utils/withApollo';
 
 interface IRegisterProps {}

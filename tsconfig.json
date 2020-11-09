@@ -1,51 +1,3 @@
-// {
-//   "compilerOptions": {
-//     "target": "es6",
-//     "module": "commonjs",
-//     "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
-//     "sourceMap": true,
-//     "outDir": "./dist",
-//     "moduleResolution": "node",
-//     "declaration": false,
-//     "esModuleInterop": true,
-//     "composite": false,
-//     "removeComments": true,
-//     "noImplicitAny": true,
-//     "strictNullChecks": true,
-//     "strictFunctionTypes": true,
-//     "noImplicitThis": true,
-//     "noUnusedLocals": false,
-//     "noUnusedParameters": true,
-//     "noImplicitReturns": true,
-//     "noFallthroughCasesInSwitch": true,
-//     "allowSyntheticDefaultImports": false,
-//     "emitDecoratorMetadata": true,
-//     "experimentalDecorators": true,
-//     "skipLibCheck": true,
-//     "baseUrl": ".",
-//     "rootDir": "src"
-//   },
-//   "exclude": ["node_modules"],
-//   "include": ["./src/**/*.tsx", "./src/**/*.ts"]
-// }
-// {
-//   "compilerOptions": {
-//     "module": "commonjs",
-//     "declaration": true,
-//     "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
-//     "removeComments": true,
-//     "emitDecoratorMetadata": true,
-//     "experimentalDecorators": true,
-//     "allowSyntheticDefaultImports": true,
-//     "target": "es2017",
-//     "sourceMap": true,
-//     "esModuleInterop": true,
-//     "outDir": "./dist",
-//     "baseUrl": "./",
-//     "incremental": true
-//   },
-//   "exclude": ["node_modules", "dist"]
-// }
 {
   "compilerOptions": {
     "module": "commonjs",
@@ -60,11 +12,7 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -73,15 +21,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": false,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noImplicitAny": false
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "pages/_app.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_app.tsx"],
+  "exclude": ["node_modules"]
 }
