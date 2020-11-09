@@ -1,0 +1,11 @@
+build:
+  docker:
+    web: Dockerfile
+  config:
+    NODE_ENV: production
+run:
+  web: bundle exec puma -C config/puma.rb
+  worker:
+    command:
+      - npm start
+    image: web
