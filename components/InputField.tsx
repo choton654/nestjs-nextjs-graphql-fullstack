@@ -4,9 +4,10 @@ import {
   FormLabel,
   Input,
   Textarea,
-} from "@chakra-ui/core";
-import * as React from "react";
-import { useField } from "Formik";
+} from '@chakra-ui/core';
+import * as React from 'react';
+// import { useField } from "Formik";
+const { useField } = require('formik');
 
 type IInputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string;
