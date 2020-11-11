@@ -1,6 +1,6 @@
 sudo: required
 services: -docker
 before_install:
-  - docker-compose build -t choton654/nest-next-graphql .
+  - docker-compose build
 # script:
 #   - docker run choton654/nest-next-graphql npm run test -- --coverage
