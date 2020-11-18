@@ -5,8 +5,7 @@ services:
 before_install:
   - docker-compose --build
 
-# script:
-#   - docker run -e CI=true choton654/react-test npm test
-
-after_success:
+script:
   - docker-compose up
+# after_success:
+#   - docker-compose up
