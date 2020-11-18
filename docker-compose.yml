@@ -18,7 +18,7 @@ services:
     ports:
       - 6379:6379
   web:
-    image: 013225200604.dkr.ecr.ap-south-1.amazonaws.com/nest-next-graphql:latest
+    image: nest-next-graphql-api
     networks:
       - webnet
     build:

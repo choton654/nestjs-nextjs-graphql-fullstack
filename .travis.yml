@@ -1,17 +1,12 @@
 sudo: required
-services: -docker
+services:
+  - docker
+
 before_install:
-  - docker-compose build
+  - docker-compose --build
+
 # script:
-#   - docker run choton654/nest-next-graphql npm run test -- --coverage
-deploy:
-  provider: elasticbeanstalk
-  region: 'ap-south-1'
-  app: 'docker'
-  env: 'docker-env'
-  bucket_name: 'elasticbeanstalk-ap-south-1-013225200604'
-  bucket_path: 'docker'
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+#   - docker run -e CI=true choton654/react-test npm test
+
+after_success:
+  - docker-compose up
