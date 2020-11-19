@@ -2,10 +2,14 @@ sudo: required
 services:
   - docker
 
-# before_install:
-#   - docker-compose --build
+before_install:
+  - docker build -t choton654/nest-next-graphql-api .
 
 script:
-  - docker-compose up --build
-# after_success:
-#   - docker-compose up
+  - docker-compose up
+
+after_success:
+  #  login to docker cli
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # push images to docker hub
+  - docker push choton654/nest-next-graphql-api
